@@ -19,4 +19,7 @@ def replicating_strat_one_step_european(S_0, rate, X_u, X_d):
   d = S_0/X_d
   a = (X_u-X_d)/((u-d)*S_0)
   b = (1+rate)**(-1)*(uX_d-dX_u)/(u-d)
+# A = np.array([[S_0, 1+rate], [S_0, 1+rate]])
+# v = np.array([X_u, X_d])
+# Av = np.linalg.solve(A,v) """This returns the same thing as the code above just in matrix form"""
   return np.array([a,b])
